@@ -124,7 +124,6 @@ public class AdminServiceImpl implements AdminService {
             //对密码进行校验
             return BCrypt.checkpw(admin.getPassword(),adminResult.getPassword());
         }
-        //返回结果
     }
 
     /**

@@ -16,7 +16,7 @@ public class SkuInfo implements Serializable {
     @Field(index = true, store = true, type = FieldType.Keyword)
     private Long id;
 
-    //SKU名称
+    //SKU名称，指定ik中文分词
     @Field(index = true, store = true, type = FieldType.Text, analyzer = "ik_smart")
     private String name;
 

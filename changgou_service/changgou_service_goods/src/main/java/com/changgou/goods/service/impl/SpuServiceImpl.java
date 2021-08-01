@@ -56,6 +56,13 @@ public class SpuServiceImpl implements SpuService {
 
     @Autowired
     private CategoryBrandMapper categoryBrandMapper;
+
+//    public static void main(String[] args) {
+//        IdWorker idWorker=new IdWorker(1,1);
+//        for (int i=0;i<100;i++){
+//            System.out.println(idWorker.nextId());
+//        }
+//    }
     /**
      * 增加
      * @param goods
@@ -134,7 +141,6 @@ public class SpuServiceImpl implements SpuService {
                 sku.setBrandName(brand.getName());
                 //将sku添加到数据库
                 skuMapper.insertSelective(sku);
-
             }
         }
     }

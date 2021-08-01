@@ -1,6 +1,7 @@
 package com.changgou.search.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.changgou.goods.pojo.Sku;
 import com.changgou.search.pojo.SkuInfo;
 import com.changgou.search.service.SearchService;
 import org.apache.commons.lang.StringUtils;
@@ -217,4 +218,21 @@ public class SearchServiceImpl implements SearchService {
         }
         return resultMap;
     }
+
+//    public static void main(String[] args) {
+//        List<Sku>skus=new ArrayList<>();
+//        Sku sku=new Sku();
+//        Sku sku2=new Sku();
+//        Sku sku3=new Sku();
+//        sku.setId("1");
+//        sku2.setId("2");
+//        sku3.setId("3");
+//        skus.add(sku);
+//        skus.add(sku2);
+//        skus.add(sku3);
+//        List<String>ret=skus.stream().map((sku0)->sku0.getId()).collect(Collectors.toList());
+//        for (String s : ret) {
+//            System.out.println(s);
+//        }
+//    }
 }

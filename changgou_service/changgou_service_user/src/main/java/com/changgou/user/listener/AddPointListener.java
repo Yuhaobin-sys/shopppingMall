@@ -33,7 +33,7 @@ public class AddPointListener {
             return;
         }
 
-        //判断redis中当前的任务是否存在
+        //判断redis中当前的任务是否存在，防止重复消费消息
         Object value = redisTemplate.boundValueOps(task.getId()).get();
         if (value != null){
             return;

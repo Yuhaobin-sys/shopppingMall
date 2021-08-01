@@ -20,7 +20,7 @@ public class QueryPointTask {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
-
+    //2秒执行一次
     @Scheduled(cron = "0/2 * * * * ?")
     public void queryTask(){
 

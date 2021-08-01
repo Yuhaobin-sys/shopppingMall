@@ -10,13 +10,14 @@ public class ParseJwtTest {
     @Test
     public void parseJwt(){
         //基于公钥去解析jwt
-        String jwt ="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJhcHAiXSwibmFtZSI6bnVsbCwiaWQiOm51bGwsImV4cCI6MTU2OTc4MDYyOSwiYXV0aG9yaXRpZXMiOlsiYWNjb3VudGFudCIsInVzZXIiLCJzYWxlc21hbiJdLCJqdGkiOiIwNGVkODYyOC03NTBhLTRjYzktYWY5My01ZDliNTJhMDU3NzUiLCJjbGllbnRfaWQiOiJjaGFuZ2dvdSIsInVzZXJuYW1lIjoiaGVpbWEifQ.U4triwcNsNhYFiHEp1-kdyNJhNAzJZQkJqRFfaF-eJYKEl9hhxkvdrXh0R9dbsjiNVAtKMP-Khvz63QM5tmzxFKF1YoPR9vDb1xAqhsYhFLpwkp61ADYVeJ4AHvI7HHyNPuzXsnTd_y47vcL56OHFBXDouQePLrtqt-24sKdFHgAHwnGS6S-N20jhYJIkdeUsfWbJbO5b4_UZegkAoR4GN6UGJSn7WqOPxryQXCJ_XBEo0P-duhaWpkvr_YKrc14HeXPnY4A4bFUZniqRt__VVC8ihKvsA2ZBNKZ8BpI8g4gqI3I674MRktZIv7qzr46fv9YrBkNFq73LiZ78lPTlA";
-
-        String publicKey ="-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvFsEiaLvij9C1Mz+oyAmt47whAaRkRu/8kePM+X8760UGU0RMwGti6Z9y3LQ0RvK6I0brXmbGB/RsN38PVnhcP8ZfxGUH26kX0RK+tlrxcrG+HkPYOH4XPAL8Q1lu1n9x3tLcIPxq8ZZtuIyKYEmoLKyMsvTviG5flTpDprT25unWgE4md1kthRWXOnfWHATVY7Y/r4obiOL1mS5bEa/iNKotQNnvIAKtjBM4RlIDWMa6dmz+lHtLtqDD2LF1qwoiSIHI75LQZ/CNYaHCfZSxtOydpNKq8eb1/PGiLNolD4La2zf0/1dlcr5mkesV570NxRmU1tFm8Zd3MZlZmyv9QIDAQAB-----END PUBLIC KEY-----";
+        String jwt="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJhcHAiXSwibmFtZSI6bnVsbCwiaWQiOm51bGwsImV4cCI6MTYyNzgxMTg4MywiYXV0aG9yaXRpZXMiOlsiYWNjb3VudGFudCIsInVzZXIiLCJzYWxlc21hbiJdLCJqdGkiOiI5OTdlNmNjNC1iNDI3LTQ2OGYtOWU1OC1iZWM5YmI1YmMwNzQiLCJjbGllbnRfaWQiOiJjaGFuZ2dvdSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.HtAkyLW7NPaSDHcAoNZEqUb5GhpiYPBuXIygfAJ2BBtbjMJJU966lN_b7NcVdBT9T4eAuxIA-Cm8EnboKFrbzc6Z82l7rcq_5BlEnM8wJ5hLRAstav8JhHgt831VPA-2WxYNtHPWW-oik_rK73Z1lKZIJjX71A49Pj-FYXReiusV2u8vemAXSwcaNxaE9ByVzNZ_P64Y_2RBVXX8FUyXnR1GQ0lwphpF4Duu2qGN9E3X8tn7tAowNuynoQmyKxY4zEkFPt1vnUJBKkA0f4Y6b_iIxjqtLHEg4vQ_033WoUx8ESesS_ow8A9JO_McnXjBSz20iUUPMFDiRrb1pqbn0g";
+        String publicKey ="-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAii+mk3UgITDTzE1rqzVJEulnodpolepL+2dOLVsMW8WwMfZE1To/3FvQ3xG6KtjG4Q+BZuDaiep8OF/mB6nLEihE6bNBHEmPeO90pXBo3+er3M/duVa0908dE9ZiV2duSeBFPMY3DAa7f40gkU03Q7ywfg8WAtz6Sej9lLcsGd5wPwdUtxoUOhO/lmZXo8/1SnciXtbekeRCmh8ulOdHIy0IlEJrwOcnGUkw0/hTyTQmzNI21cwfTN04A/7fqyZ7phbKvLeabVGd9dy0xt1a9C8e74/HdsRCHfbu1l/uEHeC0mmTDYOPfBFUwKv5ZwftCQF6zfA0FbLlIFrPtiKKdwIDAQAB-----END PUBLIC KEY-----";
 
         Jwt token = JwtHelper.decodeAndVerify(jwt, new RsaVerifier(publicKey));
 
         String claims = token.getClaims();
         System.out.println(claims);
+        //{"scope":["app"],"name":null,"id":null,"exp":1627811883,"authorities":["accountant","user","salesman"],"jti":"997e6cc4-b427-468f-9e58-bec9bb5bc074","client_id":"changgou","username":"admin"}
+
     }
 }

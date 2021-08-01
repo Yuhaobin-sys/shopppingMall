@@ -24,7 +24,7 @@ public class UserController {
      * @return
      */
     @GetMapping
-    @PreAuthorize("hasAnyAuthority('accountant')")
+    @PreAuthorize("hasAnyAuthority('admin')")
     public Result findAll(){
         List<User> userList = userService.findAll();
         return new Result(true, StatusCode.OK,"查询成功",userList) ;
@@ -36,6 +36,7 @@ public class UserController {
      * @return
      */
     @GetMapping("/{username}")
+    @PreAuthorize("hasAnyAuthority('user')")
     public Result findById(@PathVariable String username){
         User user = userService.findById(username);
         return new Result(true,StatusCode.OK,"查询成功",user);
