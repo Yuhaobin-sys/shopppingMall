@@ -109,7 +109,6 @@ public class OrderServiceImpl implements OrderService {
 
         //扣减库存并增加销量
         skuFeign.decrCount(order.getUsername());
-
         //int i =1/0;
         //添加任务数据
         System.out.println("向订单数据库中的任务表去添加任务数据");
@@ -128,8 +127,7 @@ public class OrderServiceImpl implements OrderService {
 
         //5.删除购物车数据(redis)
         redisTemplate.delete("cart_"+order.getUsername());
-        //发送延迟消息
-//        rabbitTemplate.convertAndSend("","queue.ordercreate",orderId);
+
         return orderId;
     }
 

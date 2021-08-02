@@ -1,5 +1,6 @@
 package com.changgou.goods.service.impl;
 
+import com.alibaba.fescar.spring.annotation.GlobalTransactional;
 import com.changgou.goods.dao.SkuMapper;
 import com.changgou.goods.service.SkuService;
 import com.changgou.goods.pojo.Sku;
@@ -115,7 +116,6 @@ public class SkuServiceImpl implements SkuService {
     public void decrCount(String username) {
         //1.获取购物车中的数据
         List<OrderItem> orderItemList = redisTemplate.boundHashOps("cart_" + username).values();
-
         //2.循环扣减库存并增加销量
         for (OrderItem orderItem : orderItemList) {
             int count = skuMapper.decrCount(orderItem);
