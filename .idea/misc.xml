@@ -14,12 +14,20 @@
         <option value="$PROJECT_DIR$/changgou_service_api/changgou_service_seckill_api/pom.xml" />
         <option value="$PROJECT_DIR$/changgou_web/changgou_web_seckill/pom.xml" />
         <option value="$PROJECT_DIR$/changgou_service/changgou_service_consume/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/changgou_gateway/changgou_gateway_web/pom.xml" />
         <option value="$PROJECT_DIR$/changgou_service/changgou-service-page/pom.xml" />
         <option value="$PROJECT_DIR$/changgou_service/changgou_search/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_service/changgou_service_business/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_service/changgou_service_config/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_service/changgou_service_system/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_service_api/changgou_service_business_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_service_api/changgou_service_config_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_service_api/changgou_service_system_api/pom.xml" />
       </set>
     </option>
   </component>

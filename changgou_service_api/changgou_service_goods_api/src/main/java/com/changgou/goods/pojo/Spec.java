@@ -4,11 +4,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
-/**
- * spec实体类
- * @author 黑马架构师2.5
- *
- */
+
 @Table(name="tb_spec")
 public class Spec implements Serializable {
 

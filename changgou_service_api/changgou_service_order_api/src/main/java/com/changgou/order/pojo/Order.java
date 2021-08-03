@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 /**
  * order实体类
- * @author 黑马架构师2.5
  *
  */
 @Table(name="tb_order")
